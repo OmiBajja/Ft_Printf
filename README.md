@@ -57,8 +57,8 @@ Below is a list of the implemented functions along with their descriptions:
 - `ft_putchar.c` - Writes a character to the standard output.
 - `ft_putstr.c` - Writes a string to the standard output.
 - `ft_putnbr.c` - Converts and prints an integer.
-- `ft_utoa.c` - Converts an unsigned integer to a string.
-- `ft_xtoa.c` - Converts a number to a hexadecimal string.
+- `ft_putnbr_upf.c` - Converts an unsigned integer to a string.
+- `ft_printaddress.c` - Converts a number to a hexadecimal string.
 
 </br>
 
