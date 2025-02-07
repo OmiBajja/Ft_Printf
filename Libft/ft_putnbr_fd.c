@@ -12,33 +12,33 @@
 
 #include "libft.h"
 
-void	ft_putchar(char c);
+void	ft_putchar_fd(char c, int fd);
 
-void	ft_putnbrhexaupp(int n)
+void	ft_putnbr_fd(int n, int fd)
 {
-	char *tab;
-
-	tab = "0123456789ABCDEF";
 	if (n == -2147483648)
 	{
-		write(1, "-80000000", 9);
+		write(fd, "-2147483648", 11);
 		return ;
 	}
 	if (n < 0)
 	{
 		n *= -1;
-		ft_putchar('-');
+		ft_putchar_fd('-', fd);
 	}
-	if (n >= 16)
-		ft_putnbrhexaupp(n / 16);
-	ft_putchar(tab[(int)n % 16]);
+	if (n > 9)
+		ft_putnbr_fd(n / 10, fd);
+	ft_putchar_fd(n % 10 + '0', fd);
 }
 /*
 #include <fcntl.h>
 
 int	main(void)
 {
-	int c = -30;
-	ft_putnbrhexaupp(c);
+	int c = 123123123;
+	int fd = open("test", O_RDWR);
+	if (fd == -1)
+		return (1);
+	ft_putnbr_fd(c, fd);
 	return (0);
 }*/

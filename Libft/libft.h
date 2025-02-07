@@ -6,7 +6,7 @@
 /*   By: obajja <obajja@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/18 16:48:50 by obajja            #+#    #+#             */
-/*   Updated: 2024/11/20 12:28:16 by obajja           ###   ########.fr       */
+/*   Updated: 2024/11/27 17:01:16 by obajja           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,11 +28,11 @@ typedef struct s_list
 void				*ft_calloc(size_t elementCount, size_t elementSize);
 int					ft_isascii(int str);
 char				*ft_itoa(int n);
+int					ft_putchar_pf(char c);
+int					ft_putstr_pf(char *s);
 void				*ft_memset(void *str, int a, size_t n);
 void				ft_putnbr_fd(int n, int fd);
 void				ft_putnbr(int n);
-void				ft_putnbrhexalow(int n);
-void				ft_putnbrhexaupp(int n);
 char				*ft_strchr(const char *str, int tofind);
 char				*ft_strjoin(char const *s1, char const *s2);
 int					ft_strlen(const char *str);
@@ -46,7 +46,6 @@ void				ft_putchar_fd(char c, int fd);
 void				ft_putchar(char c);
 void				ft_putstr_fd(char *s, int fd);
 void				ft_putstr(char *s);
-void				ft_printadress(void * ptr);
 char				*ft_strdup(const char *src);
 size_t				ft_strlcat(char *dst, const char *src, size_t size);
 char				*ft_strmapi(char const *s, char (*f)(unsigned int, char));

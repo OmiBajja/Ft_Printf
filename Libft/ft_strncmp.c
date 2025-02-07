@@ -1,44 +1,41 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_putnbr_fd.c                                     :+:      :+:    :+:   */
+/*   ft_strncmp.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: obajja <obajja@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/11/14 18:32:50 by obajja            #+#    #+#             */
-/*   Updated: 2024/11/14 18:32:49 by obajja           ###   ########.fr       */
+/*   Created: 2024/11/14 18:44:33 by obajja            #+#    #+#             */
+/*   Updated: 2024/11/19 16:53:04 by obajja           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void	ft_putchar(char c);
-
-void	ft_putnbrhexalow(int n)
+int	ft_strncmp(const char *str1, const char *str2, int n)
 {
-	char *tab;
+	int	i;
 
-	tab = "0123456789abcdef";
-	if (n == -2147483648)
+	i = 0;
+	if (n <= 0)
+		return (n);
+	while (str1[i] && str2[i] && str1[i] == str2[i] && i < n - 1)
 	{
-		write(1, "-80000000", 9);
-		return ;
+		i++;
 	}
-	if (n < 0)
-	{
-		n *= -1;
-		ft_putchar('-');
-	}
-	if (n >= 16)
-		ft_putnbrhexalow(n / 16);
-	ft_putchar(tab[(int)n % 16]);
+	return ((unsigned char)str1[i] - (unsigned char)str2[i]);
 }
 /*
-#include <fcntl.h>
+#include <stdio.h>
+#include <string.h>
 
-int	main(void)
+int main (void)
 {
-	int c = -68;
-	ft_putnbrhexalow(c);
-	return (0);
+  char* s1 = "test\200";
+  char* s2 = "test\0dasdasd";
+  int n = 6;
+
+  printf("%d",ft_strncmp(s1,s2,n));
+  printf("\n%d",strncmp(s1,s2,n));
+  return (0);
 }*/
