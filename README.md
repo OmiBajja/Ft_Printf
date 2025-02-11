@@ -3,7 +3,7 @@
 </br>
 </br>
 
-<strong>ft_printf - Custom Printf Implementation 🖨️</strong>
+# Ft_printf - Custom Printf Implementation 🖨️
 
 <p>ft_printf is a custom implementation of the standard printf function in C. This project provided a deeper understanding of formatted output, variadic functions, and efficient buffer management.</p>
 
